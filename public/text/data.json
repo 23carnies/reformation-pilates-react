@@ -1,0 +1,34 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "title": "Card 1",
+      "text": "Cues and modifications are based on the biomechanical movement, such as correct alignment and joint range of motion.",
+      "image": "/images/Instruction.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Card 2",
+      "text": "Experienced in training professional athletes, dancers, fitness-minded who want to add another level of challenge, as well as pregnant women, and rehabilitation clients.",
+      "image": "/images/length.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Card 3",
+      "text": " New insight into movement, posture, strength, and mind-body connection.",
+      "image": "/images/bwPlank.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Card 4",
+      "text": "Exercise direction given based on individual physiology and personal goals.",
+      "image": "/images/SuperReformer.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Card 5",
+      "text": " Unlike franchise Pilates training, Reformation Pilates Studio guides you through a safe and progressively challenging workout regimen while incorporating innovative techniques with the traditional Pilates discipline.",
+      "image": "/images/warrior2.jpg"
+    }
+  ]
+}

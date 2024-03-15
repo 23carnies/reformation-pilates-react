@@ -1,0 +1,11 @@
+#home {
+    height: 100%;
+}
+.bg-pink {
+    background-color: #DEBADD;
+}
+
+.bw {
+        filter: grayscale(100%);
+    
+}
