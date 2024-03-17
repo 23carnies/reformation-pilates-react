@@ -21,11 +21,12 @@ code {
 }
 
 :root {
- --header-height: 3.5rem;
+ --header-height: 7rem;
  --first-color: hsl(167, 17%, 10%);
  --title-color: hsl(0, 0%, 95%);
  --text-color: hsl(0, 0%, 75%);
  --body-color: hsl(171, 91%, 31%);
+ --secondary-color: #D7F3F6;
  --body-font: "Montserrat", sans-serif;
  --second-font: "Dancing Script", cursive;
  --h2-font-size: 1.25rem;
@@ -36,7 +37,7 @@ code {
 }
 
 body {
- background-color: var(--body-color);
+ background-color: var(--secondary-color);
  color: var(--text-color);
  font-family: var(--body-font);
 }
@@ -47,4 +48,9 @@ ul {
 
 a {
  text-decoration: none;
+}
+
+main {
+  padding-top: var(--header-height);
+  margin-top: var(--header-height);
 }

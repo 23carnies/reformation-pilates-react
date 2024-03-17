@@ -1,25 +1,24 @@
 import React from 'react';
-import  Navbar  from './components/Navbar/Navbar';
-import NavbarHook from './components/NavbarHook/NavbarHook';
-import Benefits from './pages/Benefits';
-import Instructors from './pages/Instructors';
-import PriceSchedule from './pages/PriceSchedule';
-import Contact from './pages/Contact';
-import "./App.css";
+import Footer from './components/Footer/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
+import NavbarHook from './components/NavbarHook/NavbarHook';
+import Content from './components/Content/Content';
 
 const App = () => {
- return (
-  <>
-  <NavbarHook />
-   <Home />
-   <Benefits />
-   <Instructors />
-   <PriceSchedule />
-   <Contact />
-  </>
- );
+  return (
+    <>
+    <Router>
+      {/* <Navigation /> */}
+      <NavbarHook />
+      <main>
+        <Routes>
+          <Route path="*" element={<Content />} />
+        </Routes>
+      </main>
+      <Footer />
+      </Router>
+    </>
+  );
 };
 
 export default App;
