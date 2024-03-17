@@ -3,7 +3,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    background-color: transparent;
+    background-color: var(--body-color);
     z-index: var(--z-fixed);
   }
   
@@ -44,12 +44,24 @@
     display: flex;
     flex-direction: column;
     row-gap: 2.5rem;
+    background-color: rgba(7, 151, 129, 0.9);
+    width: 100vw;
+    height: 100vh;
+    padding-top: 7%;
+    padding-left: 7%;
   }
   
   .nav__link {
     color: var(--title-color);
     font-weight: var(--font-semi-bold);
     transition: color 0.4s;
+    text-decoration: none;
+  }
+  .nav__link.active {
+    color: coral;
+    font-weight: 900;
+    transition: color 0.4s;
+    border: 3px solid yellow;
   }
   
   .nav__link:hover {

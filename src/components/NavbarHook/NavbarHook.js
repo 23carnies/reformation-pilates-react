@@ -3,12 +3,13 @@ import { NavLink } from "react-router-dom";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { useMediaQuery } from "react-responsive";
 import "./NavbarHook.css";
-const logo = `${process.env.PUBLIC_URL}/images/RFLogo.png`; // Import the 'logo' image
-
+import { Link as ScrollLink } from "react-scroll";
 
 const NavbarHook = () => {
+  const logo = `${process.env.PUBLIC_URL}/images/RFLogo.png`; // Import the 'logo' image
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: "1150px" });
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -20,59 +21,74 @@ const NavbarHook = () => {
   const renderNavLinks = () => {
     const listClassName = isMobile ? "nav__list" : "nav__list__web";
     const linkClassName = "nav__link";
-    // const buttonClassName = "nav__cta";
+    const buttonClassName = "nav__cta";
     return (
       <ul className={listClassName}>
         <li>
-          <NavLink to="/" className={linkClassName} onClick={closeMobileMenu}>
+          <ScrollLink
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-75}
+            duration={500}
+            className={linkClassName}
+            onClick={closeMobileMenu}
+          >
             Home
-          </NavLink>
+          </ScrollLink>
         </li>
         <li>
-          <NavLink
-            to="/benefits"
+          <ScrollLink
+            to="benefits"
+            spy={true}
+            smooth={true}
+            offset={-75}
+            duration={500}
             className={linkClassName}
             onClick={closeMobileMenu}
           >
             Benefits
-          </NavLink>
+          </ScrollLink>
         </li>
         <li>
-          <NavLink
-            to="/instructors"
+          <ScrollLink
+            to="instructors"
+            spy={true}
+            smooth={true}
+            offset={-75}
+            duration={500}
             className={linkClassName}
             onClick={closeMobileMenu}
           >
             Instructors
-          </NavLink>
+          </ScrollLink>
         </li>
         <li>
-          <NavLink
-            to="/price-schedule"
+          <ScrollLink
+            to="price-schedule"
+            spy={true}
+            smooth={true}
+            offset={-75}
+            duration={500}
             className={linkClassName}
             onClick={closeMobileMenu}
           >
             Price & Schedule
-          </NavLink>
+          </ScrollLink>
         </li>
         <li>
-          <NavLink
-            to="/contact"
+          <ScrollLink
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-75}
+            duration={500}
             className={linkClassName}
             onClick={closeMobileMenu}
           >
             Contact
-          </NavLink>
+          </ScrollLink>
         </li>
-        {/* <li>
-          <NavLink
-            to="/get-started"
-            className={`${linkClassName} ${buttonClassName}`}
-            onClick={closeMobileMenu}
-          >
-            Get Started
-          </NavLink>
-        </li> */}
       </ul>
     );
   };
@@ -80,16 +96,16 @@ const NavbarHook = () => {
     <header className="header">
       <nav className="nav container">
         <NavLink to="/" className="nav__logo">
-          <img src={logo} alt="Reformation Pilates Logo" width={200}/>
+          <img src={logo} alt="Reformation Pilates Logo" width={200} />
         </NavLink>
-        {isMobile && (
+        {isMobile && !isMenuOpen && (
           <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
             <IoMenu />
           </div>
         )}
         {isMobile ? (
           <div
-            className={`nav__menu  ${isMenuOpen ? "show-menu" : ""}`}
+            className={`nav__menud  ${isMenuOpen ? "show-menu" : "d-none"}`}
             id="nav-menu"
           >
             {renderNavLinks()}
