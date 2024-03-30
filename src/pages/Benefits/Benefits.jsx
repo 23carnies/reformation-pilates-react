@@ -1,15 +1,13 @@
-import React from "react";
-import { Container } from "react-bootstrap";
-import "./Benefits.css";
-import Beginning from "../../components/Beginning/Beginning";
+import React from 'react';
+import { Container } from 'react-bootstrap';
+import '../../index.css';
 
-const Benefits = () => {
+export const Benefits = () => {
   const studio = `${process.env.PUBLIC_URL}/images/Studio3.jpeg`;
   return (
     <>
-      <Beginning />
-      <Container fluid className="bg-warning fullHeight m-2 p-2" id="benefits">
-        <h2 className="benefits">Benefits</h2>
+      <Container fluid className="bg-pink fullHeight m-2 p-2" id="benefits">
+        <h2 className="section-header">Benefits</h2>
         <section className="container text-center d-xl-flex">
           <img
             src={studio}
@@ -49,5 +47,3 @@ const Benefits = () => {
     </>
   );
 };
-
-export default Benefits;

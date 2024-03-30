@@ -1,18 +1,31 @@
-import Benefits from "../../pages/Benefits/Benefits";
-import Contact from "../../pages/Contact";
-import Home from "../../pages/Home/Home";
-import Instructors from "../../pages/Instructors";
-import PriceSchedule from "../../pages/PriceSchedule";
+import Benefits from '../../pages/Benefits/Benefits';
+import Contact from '../../pages/Contact/Contact';
+import Cards from '../../pages/Cards/Cards';
+import Instructors from '../../pages/Instructors/Instructors';
+import PriceSchedule from '../../pages/PriceSchedule/PriceSchedule';
+import Hero from '../Hero/Hero';
+import React, { useRef } from 'react';
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 
-const Content = () => {
+export const Content = () => {
+  const ref = useRef(null);
+  const options = {
+    smooth: true,
+    multiplier: 1,
+    smartphone: {
+      smooth: true,
+    },
+  };
   return (
-    <div id="mainContent">
-      <Home />
-      <Benefits />
-      <Instructors />
-      <PriceSchedule />
-      <Contact />
-    </div>
+    <LocomotiveScrollProvider options={options} watch={[]} containerRef={ref}>
+      <div data-scroll-container ref={ref}>
+        <Hero />
+        <Cards />
+        <Benefits />
+        <Instructors />
+        <PriceSchedule />
+        <Contact />
+      </div>
+    </LocomotiveScrollProvider>
   );
 };
-export default Content;

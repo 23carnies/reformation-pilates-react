@@ -1,32 +1,40 @@
-import React from "react";
+import React from 'react';
+import { FaFacebookF } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
+import '../../index.css';
 
-const Footer = () => {
+export const Footer = () => {
+  const logo = `${process.env.PUBLIC_URL}/images/RFLogo.png`; // Import the 'logo' image
+  const year = new Date().getFullYear();
   return (
     <footer>
       <nav
-        className="bg-color-foot d-flex flex-column flex-md-row pt-3 px-md-auto align-items-center"
+        className="d-flex justify-content-between align-items-center"
         role="navigation"
       >
-        <a className="logo" href="index.html">
-          <img
-            src="resources/images/RFLogo.png"
-            width="170"
-            height="50"
-            alt="Logo"
-          />
-        </a>
-        <p>&copy 2022 Reformation Pilates</p>
-        <p>
-          <a href="https://www.facebook.com/ReformationPilatesStudio/">
-            <i className="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+        <div>
+          <a className="logo" href="index.html">
+            <img src={logo} width="170" height="50" alt="Logo" />
           </a>
-          <a href="https://www.instagram.com/katrinaroelle/">
-            <i className="fa fa-instagram fa-3x" aria-hidden="true"></i>
-          </a>
-        </p>
+        </div>
+        <p>&copy; {year} Reformation Pilates</p>
+        <div>
+          <div className="me-3 mb-2">
+            <a
+              className="social-media"
+              href="https://www.facebook.com/ReformationPilatesStudio/"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              className="social-media"
+              href="https://www.instagram.com/katrinaroelle/"
+            >
+              <FaInstagram />
+            </a>
+          </div>
+        </div>
       </nav>
     </footer>
   );
 };
-
-export default Footer;

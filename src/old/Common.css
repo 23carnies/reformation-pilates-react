@@ -1,0 +1,31 @@
+/* 
+.section-header {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    font-style: italic;
+}
+
+.section-header:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.headingText {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.bg-mint {
+    background-color: var(--secondary-color);
+
+} */
