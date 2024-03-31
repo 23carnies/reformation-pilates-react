@@ -37,6 +37,7 @@ const App = () => {
                   <Hero />
                   <Beginning />
                   <Cost />
+                  <Benefits />
                   <Coupon />
                   <Location />
                   <Contact />

@@ -4,8 +4,8 @@ import { Container } from 'react-bootstrap';
 export const Coupon = () => {
   const coupon = `${process.env.PUBLIC_URL}/images/coupon2024.png`;
   return (
-    <Container fluid className="bg-mint text-center">
-      <Container fluid className='p-5 pb-0'>
+    <Container fluid className="bg-mint text-center" id="coupon">
+      <Container fluid className="p-5 pb-0">
         <img
           src={coupon}
           alt="$10 off first time client coupon"

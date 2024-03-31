@@ -37,13 +37,68 @@
 
 }
 
+
+body {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+}
+
+main {
+  /* padding-top: var(--header-height); */
+  margin-top: 25px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+ul {
+  list-style: none;
+}
+
+a, .link {
+  color: var(--primary-link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a, .link:hover,
+a, .link:focus {
+  color: var(--primary-link-hover-color);
+}
+
+
+h1,
+h2 {
+  font-family: var(--title-font);
+  font-weight: var(--font-semi-bold);
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 5rem;
+  font-family: var(--display-font);
+  font-weight: var(--font-bold);
+  /* font-style: italic; */
+}
+.cost-title {
+  color: var(--tertiary-color-dark);
+  text-decoration: 2px underline var(--tertiary-color-dark);
+  text-transform: uppercase;
+
+}
+
+
+
 .img-shadow {
   /* max-width: 100%; */
   box-shadow: #151e1c 0px 0px 10px;
 }
 
 /* Hero styles */
-#home {
+#home,#beginning, #benefits,#coupon,#location{
   height: 100vh;
 }
 
@@ -84,6 +139,7 @@
   border-color: #2b022a !important;
   padding: 0.75rem 1.5rem !important;
   font-size: 1.3rem !important;
+  color: var(--title-color) !important;
 }
 
 .callToAction:hover {
@@ -91,57 +147,6 @@
   border-color: #1b011a !important; 
 }
 
-
-h1,
-h2 {
-  font-family: var(--title-font);
-  font-weight: var(--font-semi-bold);
-  font-size: 3.5rem;
-}
-
-h3 {
-  font-size: 5rem;
-  font-family: var(--display-font);
-  font-weight: var(--font-bold);
-  /* font-style: italic; */
-}
-.cost-title {
-  color: var(--tertiary-color-dark);
-  text-decoration: 2px underline var(--tertiary-color-dark);
-  text-transform: uppercase;
-
-}
-
-body {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  font-family: var(--body-font);
-}
-
-main {
-  /* padding-top: var(--header-height); */
-  margin-top: 25px;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-ul {
-  list-style: none;
-}
-
-a, .link {
-  color: var(--primary-link-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a, .link:hover,
-a, .link:focus {
-  color: var(--primary-link-hover-color);
-}
 
 /* Background Colors */
 .bg-mint {

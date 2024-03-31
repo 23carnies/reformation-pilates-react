@@ -1,10 +1,13 @@
 import React from 'react';
-import { Container, Button, Col, Row } from 'react-bootstrap'; // Import Col and Row from react-bootstrap
+import { Container, Col, Row } from 'react-bootstrap'; // Import Col and Row from react-bootstrap
 import '../../index.css';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export const Beginning = () => {
   const isDesktop = window.innerWidth > 992;
+  // console.log(isDesktop);
+  // console.log(window.innerWidth);
 
   return (
     <Container fluid className="bg-mint p-2" id="beginning">
@@ -21,7 +24,6 @@ export const Beginning = () => {
           </Col>
         ) : null}
         <Col lg={6}>
-          {' '}
           {/* Another column to hold the text content */}
           <div>
             <p className="headingText py-lg-5">
@@ -45,7 +47,23 @@ export const Beginning = () => {
       </Row>
       <div className="text-center mb-2 m-lg-4">
         <Link to="/benefits">
-          <Button className="callToAction">LEARN MORE!</Button>
+          <motion.button
+            className="btn callToAction"
+            initial={{
+              opacity: 0.5,
+              x: -100,
+              scale: 0.8,
+            }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+              // rotate: 360,
+              scale: 1.4,
+            }}
+            transition={{ type: 'spring', stiffness: 80 }}
+          >
+            LEARN MORE!
+          </motion.button>
         </Link>
       </div>
     </Container>
