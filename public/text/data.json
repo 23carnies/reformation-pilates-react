@@ -43,7 +43,7 @@
     },
     {
       "id": 3,
-      "text": " Increased core strength, granting an new, more integrated physical power"
+      "text": " Increased core strength and stability"
     },
     {
       "id": 4,
@@ -55,15 +55,31 @@
     },
     {
       "id": 6,
-      "text": "Improved sports performance (tennis, golf, running, skiing, swimming, etc.)"
+      "text": "Improved sports performance"
     },
     {
       "id": 7,
-      "text": "More balanced body (most people have a stronger side)"
+      "text": "More balanced body"
     },
     {
       "id": 8,
-      "text": "Adaptive method, able to suit the injured, pregnant, dancers, athletes, seniors, and beginners"
+      "text": "Adaptive method, able to suit:"
+    },
+    {
+      "id": 9,
+      "text": "Pregnant Women"
+    },
+    {
+      "id": 10,
+      "text": "Persons with Injuries"
+    },
+    {
+      "id": 11,
+      "text": "Dancers and Athletes"
+    },
+    {
+      "id": 12,
+      "text": "Seniors and Beginners"
     }
   ]
 }

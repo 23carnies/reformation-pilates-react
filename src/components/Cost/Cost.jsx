@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 import 'animate.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { GoToTopButton } from '../GoToTopButton/GoToTopButton';
 
 export const Cost = () => {
   const isMobile = window.innerWidth < 768;
@@ -27,7 +28,8 @@ export const Cost = () => {
     visible: {
       x: 1,
       // opacity: 1,
-      backgroundColor: '#079781',
+      backgroundColor: '#2191fb',
+      // backgroundColor: '#079781',
       color: '#fff',
       transition: {
         delay: 2,
@@ -41,13 +43,14 @@ export const Cost = () => {
       <Row className="justify-content-center mx-lg-5">
         <Col
           lg={6}
+          sm={10}
           className="d-flex justify-content-center align-items-center"
         >
           <img
             src={
               isMobile
                 ? `${process.env.PUBLIC_URL || ''}/images/duoUp.jpg`
-                : `${process.env.PUBLIC_URL || ''}/images/doubleWheel.jpg`
+                : `${process.env.PUBLIC_URL || ''}/images/DoubleWheel.jpg`
             }
             alt="Pilates trio class"
             className="img-fluid img-shadow"
@@ -57,6 +60,7 @@ export const Cost = () => {
         </Col>
         <Col
           lg={6}
+          sm={10}
           className="d-flex justify-content-center align-items-center"
         >
           <div className="text-center">
@@ -64,12 +68,11 @@ export const Cost = () => {
               Beginner, Intermediate, Advanced and Pilates Fusion
             </h2>
             <p className="px-2 secondaryText">
-              Modifications are given based on individual needs. Small apparatus
-              such as exercise bands, magic circles, foam rollers and light hand
-              weights may be utilized. Exercise mats are provided for all mat
-              classes but you may bring your own.
+              Small apparatus such as exercise bands, magic circles, foam
+              rollers and light hand weights may be utilized. Exercise mats are
+              provided for all mat classes, but you may bring your own.
             </p>
-            <div className="text-center mb-2 m-lg-4">
+            {/* <div className="text-center mb-2 m-lg-4">
               <Link to="/benefits">
                 <motion.button
                   className="btn callToAction"
@@ -88,34 +91,48 @@ export const Cost = () => {
                   REGISTER
                 </motion.button>
               </Link>
-            </div>
+            </div> */}
             <div className="d-flex flex-column justify-content-center align-items-center">
               <h3 className="cost-title py-2 animate__animated animate__pulse">
                 Apparatus Fees
               </h3>
-              <motion.div
-                variants={textVariantDiv}
-                // whileInView={textVariants.visible}
-              >
-                <motion.p
-                  whileInView={textVariants.visible}
-                  className="mb-2 fees"
+              <div className="w-75 w-lg-50">
+                <motion.div
+                  variants={textVariantDiv}
+                  // whileInView={textVariants.visible}
                 >
-                  Private lessons $95
-                </motion.p>
-                <motion.p
-                  whileInView={textVariants.visible}
-                  className="mb-2 fees"
-                >
-                  Semi-Private $52
-                </motion.p>
-                <motion.p
-                  whileInView={textVariants.visible}
-                  className="mb-2 fees"
-                >
-                  Groups: Trio or Quad $35
-                </motion.p>
-              </motion.div>
+                  <motion.p
+                    whileInView={textVariants.visible}
+                    className="mb-2 fees"
+                  >
+                    Private lessons $95
+                  </motion.p>
+                  <motion.p
+                    whileInView={textVariants.visible}
+                    className="mb-2 fees"
+                  >
+                    Semi-Private $52
+                  </motion.p>
+                  <motion.p
+                    whileInView={textVariants.visible}
+                    className="mb-2 fees"
+                  >
+                    Groups:
+                  </motion.p>
+                  <motion.p
+                    whileInView={textVariants.visible}
+                    className="mb-2 fees"
+                  >
+                    Trio $45
+                  </motion.p>
+                  <motion.p
+                    whileInView={textVariants.visible}
+                    className="mb-2 fees"
+                  >
+                    Quad $35
+                  </motion.p>
+                </motion.div>
+              </div>
               <h3 className="cost-title pt-4 animate__animated animate__pulse">
                 Mat Classes
               </h3>
@@ -126,6 +143,7 @@ export const Cost = () => {
             </div>
           </div>
         </Col>
+        <GoToTopButton />
       </Row>
     </Container>
   );

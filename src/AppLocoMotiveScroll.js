@@ -12,6 +12,7 @@ import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import { Location } from './components/Location/Location';
 import { SimpleNavbar } from './components/SimpleNavbar/SimpleNavbar';
 import { Route, Routes } from 'react-router-dom'; // Import Outlet, Route, BrowserRouter, and Routes
+import { SocialMedia } from './components/SocialMedia/SocialMedia';
 
 
 
@@ -37,6 +38,7 @@ const App = () => {
                   <Hero />
                   <Beginning />
                   <Cost />
+                  <SocialMedia />
                   <Coupon />
                   <Location />
                   <Contact />

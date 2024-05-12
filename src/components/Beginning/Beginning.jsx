@@ -19,7 +19,8 @@ export const Beginning = () => {
             <img
               src={`${process.env.PUBLIC_URL || ''}/images/hangingBackBend.jpg`}
               alt="Pilates mat class"
-              className="img-fluid img-shadow m-4"
+              className="img-shadow m-4 ml-lg-5"
+              id="beginningImg"
             />
           </Col>
         ) : null}
@@ -42,30 +43,34 @@ export const Beginning = () => {
               Duets and Trios are done on the reformer. Flexible and comfortable
               clothing should be worn.
             </p>
+            <hr />
+            <p className="secondaryText py-lg-5">
+              Modifications are given based on individual needs.
+            </p>
+          </div>
+          <div className="text-center my-5 m-lg-4">
+            <Link to="https://calendly.com/krnzique/new-client-consultation" target="_blank">
+              <motion.button
+                className="btn callToAction"
+                initial={{
+                  opacity: 0.5,
+                  x: -100,
+                  scale: 0.8,
+                }}
+                whileInView={{
+                  x: 0,
+                  opacity: 1,
+                  // rotate: 360,
+                  scale: 1.4,
+                }}
+                transition={{ type: 'spring', stiffness: 80 }}
+              >
+                Book a Free Consultation
+              </motion.button>
+            </Link>
           </div>
         </Col>
       </Row>
-      <div className="text-center mb-2 m-lg-4">
-        <Link to="/benefits">
-          <motion.button
-            className="btn callToAction"
-            initial={{
-              opacity: 0.5,
-              x: -100,
-              scale: 0.8,
-            }}
-            whileInView={{
-              x: 0,
-              opacity: 1,
-              // rotate: 360,
-              scale: 1.4,
-            }}
-            transition={{ type: 'spring', stiffness: 80 }}
-          >
-            LEARN MORE!
-          </motion.button>
-        </Link>
-      </div>
     </Container>
   );
 };
